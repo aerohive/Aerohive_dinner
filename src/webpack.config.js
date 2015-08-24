@@ -1,5 +1,5 @@
 module.exports = {
-  entry: './js/main.js',
+  entry: './js/main.jsx',
   output: {
     path : '../dist',
     filename: 'bundle.js'
@@ -7,7 +7,8 @@ module.exports = {
   module : {
       loaders : [
         {text : /\.jsx?$/, loader : 'jsx-loader'},
-        { test: /\.css$/, loader: 'style-loader!css-loader' }    
+        { test: /\.css$/, loader: 'style-loader!css-loader' },
+        { test: /\.less$/, loader: 'style!css!less' }    
       ]
   },
   resolve: {

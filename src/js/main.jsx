@@ -1,10 +1,18 @@
 var Router = require('react-router');
 var React = require('react');
 
+// Router relation
 var DefaultRoute = Router.DefaultRoute;
 var Link = Router.Link;
 var Route = Router.Route;
 var RouteHandler = Router.RouteHandler;
+
+
+// Dinner main components
+var Home = require('./components/Home');
+var Report = require('./components/Report');
+var Admin = require('./components/Admin');
+var Restaurant = require('./components/Restaurant');
 
 
 var App = React.createClass({
@@ -13,8 +21,9 @@ var App = React.createClass({
             <div id="main">
                 <ul clasName="header">
                     <li><Link to="app">Home</Link></li>
-                    <li><Link to="list">List</Link></li>
-                    <li><Link to="concat">Concat</Link></li>
+                    <li><Link to="report">Report</Link></li>
+                    <li><Link to="restaurant">Restaurant</Link></li>
+                    <li><Link to="admin">Administrator</Link></li>
                 </ul>
 
                 <div>
@@ -25,40 +34,21 @@ var App = React.createClass({
     }
 });
 
-var Home = React.createClass({
-    render : function(){
-        return (
-            <div>Home Page</div>    
-        );
-    }
-});
-
-var List = React.createClass({
-    render : function(){
-        return (
-            <div>List Page</div>    
-        );
-    }
-});
-
-var Concat = React.createClass({
-    render : function(){
-        return (
-            <div>Concat Page</div>    
-        );
-    }
-});
-
 
 var routes = (
   <Route name="app" path="/" handler={App}>
-    <Route name="list" handler={List}/>
-    <Route name="concat" handler={Concat}/>
+    <Route name="report" handler={Report}/>
+    <Route name="restaurant" handler={Restaurant}/>
+    <Route name="admin" handler={Admin}/>
     <DefaultRoute handler={Home}/>
   </Route>
 );
 
 
-Router.run(routes, Router.HistoryLocation, function (Handler) {
+/**
+ * @ HashLoaction #/url
+ * @ HistroyLoaction /url
+ */
+Router.run(routes, Router.HashLocation, function (Handler) {
   React.render(<Handler/>, document.body);
 });
