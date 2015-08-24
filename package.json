@@ -1,0 +1,28 @@
+{
+  "name": "Aerohive",
+  "version": "0.0.1",
+  "description": "Aerohive company inner dinner system",
+  "main": "main.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github-company:aerohive/Aerohive_dinner.git"
+  },
+  "keywords": [
+    "dinner"
+  ],
+  "author": "F2E-aerohive",
+  "license": "Aerohive",
+  "devDependencies": {
+    "react": "~0.13.3",
+    "react-router": "~0.13.3",
+    "webpack": "~1.11.0",
+    "webpack-dev-server": "~1.10.1",
+    "jsx-loader": "~0.13.2",
+    "css-loader": "~0.16.0",
+    "style-loader": "~0.12.3"
+  }
+}
