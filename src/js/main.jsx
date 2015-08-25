@@ -13,23 +13,23 @@ var Home = require('./components/Home');
 var Report = require('./components/Report');
 var Admin = require('./components/Admin');
 var Restaurant = require('./components/Restaurant');
+var Header = require('./components/Header');
+
+
+// Main css load
+require('./../css/reset');
+require('./../css/atom');
 
 
 var App = React.createClass({
     render : function(){
         return (
-            <div id="main">
-                <ul clasName="header">
-                    <li><Link to="app">Home</Link></li>
-                    <li><Link to="report">Report</Link></li>
-                    <li><Link to="restaurant">Restaurant</Link></li>
-                    <li><Link to="admin">Administrator</Link></li>
-                </ul>
-
-                <div>
-                    <RouteHandler />
-                </div>
-            </div>           
+           <div>
+             <Header />
+             <div id="main">
+                <RouteHandler />
+             </div>
+           </div>
         );
     }
 });
