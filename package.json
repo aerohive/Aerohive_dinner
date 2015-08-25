@@ -4,6 +4,7 @@
   "description": "Aerohive company inner dinner system",
   "main": "main.js",
   "scripts": {
+    "build" : "webpack",
     "start": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
