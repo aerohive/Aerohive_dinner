@@ -14,7 +14,7 @@ module.exports = React.createClass({
                     <h1 className="hd-logo"><a href="#"><img src={logo} alt="logo" /></a></h1>
                     <nav className="hd-nav">
                         <ul>
-                            <li><Link to="app">Home</Link></li>
+                            <li><Link to="home">Home</Link></li>
                             <li><Link to="report">Report</Link></li>
                             <li><Link to="restaurant">Restaurant</Link></li>
                             <li><Link to="admin">Administrator</Link></li>

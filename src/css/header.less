@@ -7,21 +7,39 @@
 }
 
 .hd-inner{
-    width : 1220px;
+    position : relative;
+    width : 1150px;
+    height : 100%;
     margin : 0 auto;
 }
 
 .hd-logo{
-    float : left;
+    .absolute-top-left(10px,0);
 }
 
-.hd-nav,
+.hd-nav{
+    .absolute-bottom-left(10px,300px);
+}
+
 .hd-nav li{
     float : left;
+    margin-right : 50px;
 }
 
 .hd-nav li a{
+    position : relative;
     font-size : 14px;
     color : #fff;
     text-transform: uppercase;
+}
+
+.hd-nav li a:after{
+    display : none;
+    content : '';
+    .absolute-bottom-left(-13px,35%);
+    .trgle-up(#f1f1f1,10px,10px);   
+}
+
+.hd-nav li a.active:after{
+    display : block;
 }

@@ -1,5 +1,5 @@
 module.exports = {
-  entry: './src/js/main.jsx',
+  entry: ['webpack/hot/dev-server','./src/js/main.jsx'],
   output: {
     path : './dist',
     filename: 'bundle.js'

@@ -7,6 +7,11 @@ var Link = Router.Link;
 var Route = Router.Route;
 var RouteHandler = Router.RouteHandler;
 
+// Main css load
+require('./../css/reset');
+require('./../css/atom');
+require('./../css/layout');
+
 
 // Dinner main components
 var Home = require('./components/Home');
@@ -15,10 +20,6 @@ var Admin = require('./components/Admin');
 var Restaurant = require('./components/Restaurant');
 var Header = require('./components/Header');
 
-
-// Main css load
-require('./../css/reset');
-require('./../css/atom');
 
 
 var App = React.createClass({
@@ -40,7 +41,7 @@ var routes = (
     <Route name="report" handler={Report}/>
     <Route name="restaurant" handler={Restaurant}/>
     <Route name="admin" handler={Admin}/>
-    <DefaultRoute handler={Home}/>
+    <DefaultRoute name="home" handler={Home} />
   </Route>
 );
 

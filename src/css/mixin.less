@@ -42,10 +42,24 @@
 	top : @top;
 	right : @right;
 }
+.absolute-bottom-left(@bottom,@left){
+	.position();
+	bottom : @bottom;
+	left : @left;
+}
 
 .fl-w(@w){
 	float : left;
 	width : @w
+}
+
+// rect 
+.trgle-up(@color,@h,@v) {
+    width: 0;
+    height: 0;
+    border-left: @h solid transparent;
+    border-right: @h solid transparent;
+    border-bottom: @v solid @color;
 }
 
 //	Border Radius
