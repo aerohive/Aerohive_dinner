@@ -209,10 +209,22 @@
 }
 
 //transform
-.transform(@degree){
+.rotate(@degree){
   -webkit-transform: rotate(@degree);
   -moz-transform: rotate(@degree);
   transform: rotate(@degree);
+}
+
+.transform(@prop){
+  -webkit-transform: @prop;
+  -moz-transform: @prop;
+  transform: @prop; 
+}
+
+.translateY(@prop){
+  -webkit-transform: translateY(@prop);
+  -moz-transform: translateY(@prop);
+  transform: translateY(@prop); 
 }
 
 //border linear

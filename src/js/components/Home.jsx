@@ -2,11 +2,12 @@ var React = require('react'),
     DishList = require('../widgets/DishList');
 
 
+var img = require('../../image/food_l.png');
 var DishlistData = [
-    {name : 'Dish1', src : 'dish1.jpg'},
-    {name : 'Dish2', src : 'dish2.jpg'},
-    {name : 'Dish3', src : 'dish3.jpg'},
-    {name : 'Dish4', src : 'dish4.jpg'}
+    {name : 'Dish1', src : img},
+    {name : 'Dish2', src : img},
+    {name : 'Dish3', src : img},
+    {name : 'Dish4', src : img}
 ];
 
 module.exports = React.createClass({
